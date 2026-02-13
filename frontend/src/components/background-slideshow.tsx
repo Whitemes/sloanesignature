@@ -52,8 +52,8 @@ export function BackgroundSlideshow({
         </motion.div>
       </AnimatePresence>
 
-      {/* Overlay sombre pour la lisibilite du texte */}
-      <div className="absolute inset-0 bg-black/40" />
+      {/* Overlay marron fonce pour la lisibilite */}
+      <div className="absolute inset-0 bg-[#3C2415]/40" />
     </div>
   );
 }
