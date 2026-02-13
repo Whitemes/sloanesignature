@@ -27,10 +27,10 @@ export function StorySection() {
   }, []);
 
   return (
-    <section id="story" ref={sectionRef} className="relative bg-cream py-24 md:py-32 px-6 overflow-hidden scroll-mt-16">
+    <section id="story" ref={sectionRef} className="relative bg-cream py-16 md:py-24 lg:py-32 px-4 sm:px-6 overflow-hidden scroll-mt-16">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          {/* Image circulaire - gauche */}
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+          {/* Image circulaire - gauche (desktop) */}
           <div
             className="relative hidden md:flex items-center justify-center transition-all duration-1000 ease-out"
             style={{
@@ -58,7 +58,7 @@ export function StorySection() {
             className="absolute inset-0 md:hidden flex items-center justify-center pointer-events-none"
             aria-hidden="true"
           >
-            <div className="relative w-80 h-80 rounded-full overflow-hidden opacity-20">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden opacity-[0.08]">
               <Image
                 src="https://images.unsplash.com/photo-1519741497674-611481863552"
                 alt=""
@@ -70,36 +70,28 @@ export function StorySection() {
           </div>
 
           {/* Texte - droite */}
-          <div className="relative z-10">
+          <div className="relative z-10 text-center md:text-left">
             <h2
-              className="mb-8 leading-tight transition-all duration-1000 ease-out"
+              className="mb-6 md:mb-8 leading-tight transition-all duration-1000 ease-out"
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? "translateX(0)" : "translateX(60px)",
                 transitionDelay: "300ms",
               }}
             >
-              <span
-                className="block font-[family-name:var(--font-serif)] uppercase text-espresso"
-                style={{ fontSize: "clamp(44px, 5.5vw, 84px)" }}
-              >
+              <span className="block font-[family-name:var(--font-serif)] uppercase text-espresso text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
                 VOTRE
               </span>
-              <span
-                className="block font-[family-name:var(--font-cursive)] text-dusty-rose text-5xl md:text-7xl"
-              >
+              <span className="block font-[family-name:var(--font-cursive)] text-dusty-rose text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
                 Histoire
               </span>
-              <span
-                className="block font-[family-name:var(--font-serif)] uppercase text-espresso"
-                style={{ fontSize: "clamp(44px, 5.5vw, 84px)" }}
-              >
+              <span className="block font-[family-name:var(--font-serif)] uppercase text-espresso text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
                 VOUS ATTEND
               </span>
             </h2>
 
             <p
-              className="text-taupe font-light leading-relaxed mb-8 max-w-md transition-all duration-1000 ease-out"
+              className="text-taupe font-light leading-relaxed mb-6 md:mb-8 max-w-md mx-auto md:mx-0 text-sm sm:text-base transition-all duration-1000 ease-out"
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? "translateX(0)" : "translateX(60px)",
@@ -114,7 +106,7 @@ export function StorySection() {
             </p>
 
             <div
-              className="flex flex-col items-start gap-4 transition-all duration-1000 ease-out"
+              className="flex flex-col items-center md:items-start gap-4 transition-all duration-1000 ease-out"
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? "translateX(0)" : "translateX(60px)",
@@ -123,7 +115,7 @@ export function StorySection() {
             >
               <Link
                 href="/contact"
-                className="px-8 py-3 bg-espresso text-cream rounded-full text-sm tracking-widest uppercase transition-all duration-300 hover:bg-espresso-light hover:shadow-lg hover:-translate-y-0.5"
+                className="px-6 sm:px-8 py-3 bg-espresso text-cream rounded-full text-xs sm:text-sm tracking-widest uppercase transition-all duration-300 hover:bg-espresso-light hover:shadow-lg hover:-translate-y-0.5"
               >
                 DEMANDER UN DEVIS &rarr;
               </Link>
