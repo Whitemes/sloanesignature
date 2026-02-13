@@ -8,21 +8,21 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-espresso text-cream py-12 px-6" role="contentinfo">
+    <footer className="bg-espresso text-cream py-10 md:py-12 px-4 sm:px-6" role="contentinfo">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-12 mb-8">
-          <div>
-            <h3 className="text-2xl font-[family-name:var(--font-serif)] mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-8 text-center sm:text-left">
+          <div className="sm:col-span-2 md:col-span-1">
+            <h3 className="text-xl sm:text-2xl font-[family-name:var(--font-serif)] mb-3 sm:mb-4">
               Sloane Signature
             </h3>
-            <p className="text-cream/70 text-sm leading-relaxed">
+            <p className="text-cream/70 text-sm leading-relaxed max-w-xs mx-auto sm:mx-0">
               Reconnue pour la conception et l&apos;organisation de celebrations
               de luxe inoubliables.
             </p>
           </div>
 
           <div>
-            <h4 className="text-sm tracking-widest mb-4 uppercase">
+            <h4 className="text-sm tracking-widest mb-3 sm:mb-4 uppercase">
               Liens rapides
             </h4>
             <ul className="space-y-2 text-sm">
@@ -86,7 +86,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm tracking-widest mb-4 uppercase">
+            <h4 className="text-sm tracking-widest mb-3 sm:mb-4 uppercase">
               Coordonnees
             </h4>
             <ul className="space-y-3 text-sm text-cream/70">
@@ -104,14 +104,14 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-cream/20 pt-8 text-center">
-          <p className="text-cream/50 text-sm">
+        <div className="border-t border-cream/20 pt-6 md:pt-8 text-center">
+          <p className="text-cream/50 text-xs sm:text-sm">
             &copy; {new Date().getFullYear()} Sloane Signature. Tous droits
             reserves.
           </p>
           <button
             onClick={scrollToTop}
-            className="mt-4 text-cream/70 hover:text-dusty-rose transition-colors duration-200 text-sm tracking-wider"
+            className="mt-3 sm:mt-4 text-cream/70 hover:text-dusty-rose transition-colors duration-200 text-xs sm:text-sm tracking-wider"
             aria-label="Retourner en haut de la page"
             type="button"
           >

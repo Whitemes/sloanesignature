@@ -17,12 +17,12 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-cream">
       <Navigation />
-      <div className="pt-20 pb-16 px-6 max-w-6xl mx-auto">
-        <h1 className="text-5xl font-[family-name:var(--font-serif)] text-center mb-8 mt-16 text-espresso">
+      <div className="pt-24 sm:pt-28 pb-12 sm:pb-16 px-4 sm:px-6 max-w-4xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-[family-name:var(--font-serif)] text-center mb-6 sm:mb-8 mt-8 sm:mt-16 text-espresso">
           A propos de Sloane Signature
         </h1>
-        <div className="prose prose-lg mx-auto">
-          <p className="text-lg leading-relaxed mb-6 text-taupe">
+        <div className="space-y-6 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg leading-relaxed text-taupe">
             Sloane Signature est une agence d&apos;organisation de mariages et
             d&apos;evenements de luxe fondee avec la conviction que chaque
             celebration merite d&apos;etre exceptionnelle. Notre agence est
@@ -30,13 +30,13 @@ export default function AboutPage() {
             personnalise, allie a la creativite et a l&apos;unicite, en fonction
             de vos preferences, de vos objectifs et de vos envies.
           </p>
-          <p className="text-lg leading-relaxed mb-6 text-taupe">
+          <p className="text-base sm:text-lg leading-relaxed text-taupe">
             Nous disposons d&apos;une equipe passionnee, creative et
             talentueuse a qui vous pouvez confier la conception, la planification
             et la realisation de votre celebration. Nous nous engageons a
             depasser vos attentes.
           </p>
-          <p className="text-lg leading-relaxed text-taupe">
+          <p className="text-base sm:text-lg leading-relaxed text-taupe">
             Notre travail et la qualite de nos prestations reposent sur nos
             relations privilegiees avec des partenaires creatifs de premier plan,
             qui partagent notre passion et notre exigence de professionnalisme.

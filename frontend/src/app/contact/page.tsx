@@ -18,11 +18,11 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-cream">
       <Navigation />
-      <div className="pt-32 pb-16 px-6 max-w-4xl mx-auto">
-        <h1 className="text-5xl font-[family-name:var(--font-serif)] text-center mb-4 text-espresso">
+      <div className="pt-24 sm:pt-32 pb-12 sm:pb-16 px-4 sm:px-6 max-w-4xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-[family-name:var(--font-serif)] text-center mb-3 sm:mb-4 text-espresso">
           Contactez-nous
         </h1>
-        <p className="text-center text-taupe mb-12 text-lg">
+        <p className="text-center text-taupe mb-8 sm:mb-12 text-base sm:text-lg">
           Creons ensemble quelque chose d&apos;extraordinaire
         </p>
         <ContactForm />

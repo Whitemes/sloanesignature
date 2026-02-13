@@ -52,8 +52,7 @@ export function BackgroundSlideshow({
         </motion.div>
       </AnimatePresence>
 
-      {/* Overlay marron fonce pour la lisibilite */}
-      <div className="absolute inset-0 bg-[#3C2415]/40" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1a0e08]/60 via-[#3C2415]/50 to-[#1a0e08]/70" />
     </div>
   );
 }

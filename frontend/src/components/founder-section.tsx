@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 
 export function FounderSection() {
   return (
-    <section className="py-24 px-6 bg-cream">
+    <section className="py-16 md:py-24 px-4 sm:px-6 bg-cream">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
-            <div className="relative overflow-hidden rounded-lg shadow-[0_18px_45px_rgba(60,36,21,0.14)] group h-[600px]">
+            <div className="relative overflow-hidden rounded-lg shadow-[0_18px_45px_rgba(60,36,21,0.14)] group h-[320px] sm:h-[420px] md:h-[600px]">
               <Image
                 src="https://images.pexels.com/photos/34747078/pexels-photo-34747078.jpeg"
                 alt="Fondatrice de Sloane Signature"
@@ -20,15 +20,15 @@ export function FounderSection() {
           </div>
 
           <div>
-            <p className="text-sm tracking-[0.3em] text-taupe mb-4 uppercase">
+            <p className="text-xs sm:text-sm tracking-[0.3em] text-taupe mb-3 sm:mb-4 uppercase">
               La Fondatrice
             </p>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-[family-name:var(--font-serif)] leading-tight mb-6 text-espresso">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[family-name:var(--font-serif)] leading-tight mb-4 sm:mb-6 text-espresso">
               NOTRE <span className="italic">VISION</span> CREATIVE
             </h2>
 
-            <div className="space-y-6 text-taupe leading-relaxed">
+            <div className="space-y-4 sm:space-y-6 text-taupe leading-relaxed text-sm md:text-base">
               <p>
                 A la tete de Sloane Signature, notre fondatrice est reconnue
                 comme l&apos;une des organisatrices de mariages et designeuses
@@ -48,7 +48,7 @@ export function FounderSection() {
 
             <Button
               asChild
-              className="mt-8 bg-espresso hover:bg-espresso-light text-cream px-8 py-6 text-base tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="mt-6 sm:mt-8 bg-espresso hover:bg-espresso-light text-cream px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               <Link href="/a-propos">EN SAVOIR PLUS</Link>
             </Button>

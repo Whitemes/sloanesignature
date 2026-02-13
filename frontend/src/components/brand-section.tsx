@@ -4,20 +4,20 @@ import { Button } from "@/components/ui/button";
 
 export function BrandSection() {
   return (
-    <section className="py-24 px-6 bg-[#F0EBE3]">
+    <section className="py-16 md:py-24 px-4 sm:px-6 bg-[#F0EBE3]">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="order-2 md:order-1">
-            <p className="text-sm tracking-[0.3em] text-taupe mb-4 uppercase">
+            <p className="text-xs sm:text-sm tracking-[0.3em] text-taupe mb-3 sm:mb-4 uppercase">
               La Maison
             </p>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-[family-name:var(--font-serif)] leading-tight mb-8 text-espresso">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[family-name:var(--font-serif)] leading-tight mb-6 sm:mb-8 text-espresso">
               REDEFINIR L&apos;ART DE L&apos;ORGANISATION DE MARIAGES &
               D&apos;EVENEMENTS
             </h2>
 
-            <div className="space-y-6 text-taupe leading-relaxed">
+            <div className="space-y-4 sm:space-y-6 text-taupe leading-relaxed text-sm md:text-base">
               <p>
                 Avec une attention inegalee aux details et un service
                 personnalise, notre travail et nos prestations s&apos;appuient
@@ -47,14 +47,14 @@ export function BrandSection() {
 
             <Button
               asChild
-              className="mt-8 bg-espresso hover:bg-espresso-light text-cream px-8 py-6 text-base tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="mt-6 sm:mt-8 bg-espresso hover:bg-espresso-light text-cream px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               <Link href="/a-propos">EN SAVOIR PLUS</Link>
             </Button>
           </div>
 
           <div className="order-1 md:order-2">
-            <div className="relative overflow-hidden rounded-lg shadow-[0_18px_45px_rgba(60,36,21,0.14)] group h-[500px]">
+            <div className="relative overflow-hidden rounded-lg shadow-[0_18px_45px_rgba(60,36,21,0.14)] group h-[280px] sm:h-[360px] md:h-[500px]">
               <Image
                 src="https://images.unsplash.com/photo-1712314947761-a8d718bd8c32"
                 alt="Evenement de luxe organise par Sloane Signature"
