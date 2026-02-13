@@ -31,7 +31,7 @@ export function BackgroundSlideshow({
   if (images.length === 0) return null;
 
   return (
-    <div className="fixed inset-0 w-full h-screen -z-10">
+    <div className="absolute inset-0 w-full h-full">
       <AnimatePresence mode="popLayout">
         <motion.div
           key={currentIndex}

@@ -27,7 +27,7 @@ export function StorySection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative bg-cream py-24 md:py-32 px-6 overflow-hidden">
+    <section id="story" ref={sectionRef} className="relative bg-cream py-24 md:py-32 px-6 overflow-hidden scroll-mt-16">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Image circulaire - gauche */}

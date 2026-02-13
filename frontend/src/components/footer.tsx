@@ -1,6 +1,12 @@
+"use client";
+
 import Link from "next/link";
 
 export function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="bg-espresso text-cream py-12 px-6" role="contentinfo">
       <div className="max-w-6xl mx-auto">
@@ -37,16 +43,36 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <span className="text-cream/70">Mariages</span>
+                <Link
+                  href="/contact?service=mariages"
+                  className="text-cream/70 hover:text-dusty-rose transition-colors duration-200"
+                >
+                  Mariages
+                </Link>
               </li>
               <li>
-                <span className="text-cream/70">Experiences de marque</span>
+                <Link
+                  href="/contact?service=experiences"
+                  className="text-cream/70 hover:text-dusty-rose transition-colors duration-200"
+                >
+                  Experiences de marque
+                </Link>
               </li>
               <li>
-                <span className="text-cream/70">Celebrations</span>
+                <Link
+                  href="/contact?service=celebrations"
+                  className="text-cream/70 hover:text-dusty-rose transition-colors duration-200"
+                >
+                  Celebrations
+                </Link>
               </li>
               <li>
-                <span className="text-cream/70">Cadeaux sur mesure</span>
+                <Link
+                  href="/contact?service=cadeaux"
+                  className="text-cream/70 hover:text-dusty-rose transition-colors duration-200"
+                >
+                  Cadeaux sur mesure
+                </Link>
               </li>
               <li>
                 <Link
@@ -83,13 +109,14 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Sloane Signature. Tous droits
             reserves.
           </p>
-          <a
-            href="#"
-            className="inline-block mt-4 text-cream/70 hover:text-dusty-rose transition-colors duration-200 text-sm tracking-wider"
+          <button
+            onClick={scrollToTop}
+            className="mt-4 text-cream/70 hover:text-dusty-rose transition-colors duration-200 text-sm tracking-wider"
             aria-label="Retourner en haut de la page"
+            type="button"
           >
             RETOUR EN HAUT
-          </a>
+          </button>
         </div>
       </div>
     </footer>
