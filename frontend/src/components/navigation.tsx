@@ -62,10 +62,18 @@ export function Navigation() {
                   NOS SERVICES <ChevronDown className="ml-1 h-4 w-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-[#F6F2EA] border-[#3C2415]/15">
-                  <DropdownMenuItem className="text-[#3C2415] focus:bg-[#C9A89A]/20 focus:text-[#3C2415]">Mariages</DropdownMenuItem>
-                  <DropdownMenuItem className="text-[#3C2415] focus:bg-[#C9A89A]/20 focus:text-[#3C2415]">Experiences de marque</DropdownMenuItem>
-                  <DropdownMenuItem className="text-[#3C2415] focus:bg-[#C9A89A]/20 focus:text-[#3C2415]">Celebrations</DropdownMenuItem>
-                  <DropdownMenuItem className="text-[#3C2415] focus:bg-[#C9A89A]/20 focus:text-[#3C2415]">Cadeaux sur mesure</DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/contact?service=mariages" className="text-[#3C2415] focus:bg-[#C9A89A]/20 focus:text-[#3C2415]">Mariages</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/contact?service=experiences" className="text-[#3C2415] focus:bg-[#C9A89A]/20 focus:text-[#3C2415]">Experiences de marque</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/contact?service=celebrations" className="text-[#3C2415] focus:bg-[#C9A89A]/20 focus:text-[#3C2415]">Celebrations</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/contact?service=cadeaux" className="text-[#3C2415] focus:bg-[#C9A89A]/20 focus:text-[#3C2415]">Cadeaux sur mesure</Link>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </li>
