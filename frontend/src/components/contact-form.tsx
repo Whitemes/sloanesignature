@@ -87,7 +87,7 @@ export function ContactForm() {
       </div>
       <Button
         type="submit"
-        className="w-full bg-gray-800 hover:bg-gray-700 text-white py-6 text-lg"
+        className="w-full bg-espresso hover:bg-espresso-light text-cream py-6 text-lg"
       >
         Envoyer le message
       </Button>
