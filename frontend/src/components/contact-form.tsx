@@ -21,13 +21,35 @@ export function ContactForm() {
     phone: "",
     message: "",
   });
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success("Message envoye !", {
-      description: "Nous vous recontacterons dans les plus brefs delais.",
-    });
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setSending(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        toast.error(data.error || "Erreur lors de l'envoi.");
+        return;
+      }
+
+      toast.success("Message envoye !", {
+        description: "Nous vous recontacterons dans les plus brefs delais.",
+      });
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch {
+      toast.error("Erreur de connexion. Veuillez reessayer.");
+    } finally {
+      setSending(false);
+    }
   };
 
   const handleChange = (
@@ -87,9 +109,10 @@ export function ContactForm() {
       </div>
       <Button
         type="submit"
-        className="w-full bg-espresso hover:bg-espresso-light text-cream py-6 text-lg"
+        disabled={sending}
+        className="w-full bg-espresso hover:bg-espresso-light text-cream py-6 text-lg disabled:opacity-50"
       >
-        Envoyer le message
+        {sending ? "Envoi en cours..." : "Envoyer le message"}
       </Button>
     </form>
   );
